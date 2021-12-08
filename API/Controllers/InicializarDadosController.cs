@@ -21,8 +21,8 @@ namespace API.Controllers
         {
             _context.Funcionarios.AddRange(new Funcionario[]
                 {
-                    new Funcionario { FuncionarioId = 1, Nome = "Pedro Silva", Email = "p.silva@empresa.com" },
-                    new Funcionario { FuncionarioId = 2, Nome = "João Antonio", Email = "j.antonio@empresa.com" },
+                    new Funcionario { FuncionarioId = 1, Nome = "Pedro Silva", Email = "p.silva@empresa.com", Cargo = "Diretor TI" },
+                    new Funcionario { FuncionarioId = 2, Nome = "João Antonio", Email = "j.antonio@empresa.com", Cargo = "Auxiliar Adm" },
                 }
             );
             _context.SaveChanges();
