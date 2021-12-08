@@ -7,7 +7,7 @@ namespace API.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
         public DbSet<Funcionario> Funcionarios { get; set; }
-
-
+        public DbSet<Folha> Folhas { get; set; }
+        
     }
 }
