@@ -21,11 +21,15 @@ import { TemplateComponent } from "./components/template/template.component";
 import { IndexComponent } from "./components/views/home/index/index.component";
 import { ListarFuncionarioComponent } from "./components/views/funcionario/listar-funcionario/listar-funcionario.component";
 import { CadastrarFuncionarioComponent } from "./components/views/funcionario/cadastrar-funcionario/cadastrar-funcionario.component";
+import { CadastrarFolhaComponent } from './components/views/folha/cadastrar-folha/cadastrar-folha.component';
+import { ListarFolhaComponent } from './components/views/folha/listar-folha/listar-folha.component';
 @NgModule({
     declarations: [
         AppComponent,
         ListarFuncionarioComponent,
         CadastrarFuncionarioComponent,
+        ListarFolhaComponent,
+        CadastrarFolhaComponent,
         TemplateComponent,
         IndexComponent,
     ],

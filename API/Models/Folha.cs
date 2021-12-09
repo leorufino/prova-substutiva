@@ -10,6 +10,7 @@ namespace API.Models
         public int Horas { get; set; }
         public string Ano { get; set; }
         public string Mes { get; set; }
+        public int FuncionarioId { get; set; }
         public Funcionario Funcionario { get; set; }
         public DateTime CriadoEm { get; set; }
     }

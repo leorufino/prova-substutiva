@@ -28,6 +28,7 @@ namespace API.Controllers
             {
                 return BadRequest(new { message = "Este folha de pagamento já foi cadastrada" });
             }
+            folha.Funcionario = _context.Funcionarios.Find(folha.FuncionarioId);
             _context.Folhas.Add(folha);
             _context.SaveChanges();
             return Created("", folha);
