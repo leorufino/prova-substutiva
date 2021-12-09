@@ -4,8 +4,8 @@ export interface Folha {
     folhaId?: number;
     salario: number;
     horas: number;
-    ano: number;
-    mes: number;
+    ano: string;
+    mes: string;
     funcionarioId: number;
     funcionario?: Funcionario;
     criadoem?: string;

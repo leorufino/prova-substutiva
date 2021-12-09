@@ -13,8 +13,8 @@ import { Folha } from "src/app/models/folha";
 export class CadastrarFolhaComponent implements OnInit {
     salario!: number;
     horas!: number;
-    mes!: number;
-    ano!: number;
+    mes!: string;
+    ano!: string;
     funcionarioId!: number;
     funcionarios!: Funcionario[];
 
@@ -38,7 +38,7 @@ export class CadastrarFolhaComponent implements OnInit {
             ano: this.ano,
             funcionarioId: this.funcionarioId,
         };
-        console.log(folha);
+
         this.folhaService.create(folha).subscribe((folha) => {
             this.router.navigate(["folha/listar"]);
         });

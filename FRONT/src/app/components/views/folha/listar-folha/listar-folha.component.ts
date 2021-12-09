@@ -12,7 +12,7 @@ export class ListarFolhaComponent implements OnInit {
     colunasExibidas: String[] = [
         "id",
         "salario",
-        "hora",
+        "horas",
         "mes",
         "ano",
         "funcionario",
@@ -22,6 +22,7 @@ export class ListarFolhaComponent implements OnInit {
 
     ngOnInit(): void {
         this.service.list().subscribe((folhas) => {
+            console.log(folhas);
             this.folhas = folhas;
         });
     }

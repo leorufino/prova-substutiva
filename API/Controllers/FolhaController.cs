@@ -21,9 +21,9 @@ namespace API.Controllers
         [HttpPost]
         [Route("create")]
         public IActionResult Create([FromBody] Folha folha)
-        {
-            Folha folhaExistente = _context.Folhas.FirstOrDefault(u => u.Mes == folha.Mes && u.Ano == folha.Ano 
-                && u.Funcionario.Nome == folha.Funcionario.Nome);
+        {  
+
+            Folha folhaExistente = _context.Folhas.FirstOrDefault(u => u.Mes == folha.Mes && u.Ano == folha.Ano && u.FuncionarioId == folha.FuncionarioId);
             if (folhaExistente != null)
             {
                 return BadRequest(new { message = "Este folha de pagamento já foi cadastrada" });
