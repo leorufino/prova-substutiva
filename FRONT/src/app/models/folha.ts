@@ -9,4 +9,9 @@ export interface Folha {
     funcionarioId: number;
     funcionario?: Funcionario;
     criadoem?: string;
+    bruto?: number;
+    liquido?: number;
+    inss?: number;
+    fgts?: number;
+    ir?: number;
 }
