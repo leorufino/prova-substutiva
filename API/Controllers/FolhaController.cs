@@ -34,6 +34,22 @@ namespace API.Controllers
             return Created("", folha);
         }
 
+        //DELETE: /api/produto/delete/id
+        [HttpDelete]
+        [Route("delete/{id}")]
+        public IActionResult Delete([FromRoute] int id)
+        {
+            Folha folha = _context.Folhas.Find(id);
+
+            if (folha == null)
+            {
+                return NotFound();
+            }
+            _context.Folhas.Remove(folha);
+            _context.SaveChanges();
+            return Ok(_context.Folhas.ToList());
+        }
+
         //GET: api/folha/list
         [HttpGet]
         [Route("list")]
